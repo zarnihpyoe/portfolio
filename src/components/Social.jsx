@@ -15,8 +15,8 @@ const urlFor = {
 const style = css({
   textDecoration: 'none',
   color: 'inherit',
-  margin: '6',
-  opacity: '0.6',
+  margin: '18',
+  opacity: '0.5',
   transition: 'opacity 0.2s ease',
   ':hover': {
     opacity: '1'
@@ -32,7 +32,7 @@ const Social = ({ name, sites }) => (
         target={site==='email' ? "_self" : "_blank"}
         {...style}
       >
-        <Icon icon={site}/>
+        <Icon>{site}</Icon>
       </a>
     ))}
   </div>

@@ -28,20 +28,20 @@ const Icon = (props) => {
     >
       <path
         style={styles.path}
-        d={icons[props.icon]}
+        d={icons[props.children]}
       ></path>
     </svg>
   )
 }
 
 Icon.propTypes = {
-  icon: PropTypes.string.isRequired,
+  children: PropTypes.string.isRequired,
   size: PropTypes.number,
   color: PropTypes.string,
 }
 
 Icon.defaultProps = {
-  size: 24,
+  size: 36,
 }
 
 export default Icon
