@@ -9,31 +9,37 @@ const urlFor = {
   twitter: name => `https://twitter.com/${name}`,
   medium: name => `https://medium.com/@${name}`,
   linkedin: name => `https://www.linkedin.com/in/${name}`,
-  email: name => `mailto:${name}@gmail.com`
 }
 
-const style = css({
-  textDecoration: 'none',
-  color: 'inherit',
-  margin: '18',
-  opacity: '0.5',
-  transition: 'opacity 0.2s ease',
+const divStyle = css({
+  background: '#222',
+  margin: '12',
+  padding: '12',
+  borderRadius: '100%',
+  display: 'inline-block',
+  transition: 'background 0.2s ease',
   ':hover': {
-    opacity: '1'
+    background: '#7C4DFF'
   },
+})
+
+const aStyle = css({
+  textDecoration: 'none',
+  color: 'white',
 })
 
 const Social = ({ name, sites }) => (
   <div>
     {sites.map(site => (
-      <a
-        key={site}
-        href={urlFor[site](name)}
-        target={site==='email' ? "_self" : "_blank"}
-        {...style}
-      >
-        <Icon>{site}</Icon>
-      </a>
+      <div {...divStyle} key={site}>
+        <a
+          href={urlFor[site](name)}
+          target="_blank"
+          {...aStyle}
+        >
+          <Icon>{site}</Icon>
+        </a>
+      </div>
     ))}
   </div>
 )
