@@ -14,7 +14,7 @@ const urlFor = {
 const divStyle = css({
   background: '#222',
   margin: '12',
-  padding: '12',
+  padding: '8',
   borderRadius: '100%',
   display: 'inline-block',
   transition: 'background 0.2s ease',
@@ -25,7 +25,7 @@ const divStyle = css({
 
 const aStyle = css({
   textDecoration: 'none',
-  color: 'white',
+  color: 'inherit',
 })
 
 const Social = ({ name, sites }) => (

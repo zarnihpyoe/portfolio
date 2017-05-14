@@ -22,3 +22,34 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+
+.About {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  background-color: #222;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+.About--content p {
+  line-height: 250%;
+  letter-spacing: 2px;
+  font-size: 24px;
+}
+
+.email a {
+  text-decoration: none;
+  color: #B388FF;
+}
+
+.email a:hover {
+  text-decoration: underline;
+}
+
+.About--content {
+  display: block;
+  width: 100%;
+  text-align: center;
+}

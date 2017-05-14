@@ -41,7 +41,7 @@ Icon.propTypes = {
 }
 
 Icon.defaultProps = {
-  size: 24,
+  size: 28,
 }
 
 export default Icon
